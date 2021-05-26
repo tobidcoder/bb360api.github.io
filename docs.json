@@ -1,0 +1,3129 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "BB360 API Documentation",
+        "version": "1.1.0"
+    },
+    "servers": [
+        {
+            "url": "/api",
+            "description": "Laravel Generator APIs"
+        },
+        {
+            "url": "https://BB360.API.COM",
+            "description": "Laravel Generator APIs"
+        }
+    ],
+    "paths": {
+        "/area_of_expertises": {
+            "get": {
+                "tags": [
+                    "AreaOfExpertise"
+                ],
+                "summary": "Get a listing of the AreaOfExpertises.",
+                "description": "Get all AreaOfExpertises",
+                "operationId": "App\\Http\\Controllers\\API\\AreaOfExpertiseAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/AreaOfExpertise"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "AreaOfExpertise"
+                ],
+                "summary": "Store a newly created AreaOfExpertise in storage",
+                "description": "Store AreaOfExpertise",
+                "operationId": "App\\Http\\Controllers\\API\\AreaOfExpertiseAPIController::store",
+                "requestBody": {
+                    "description": "AreaOfExpertise that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AreaOfExpertise"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/AreaOfExpertise"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/area_of_expertises/{id}": {
+            "get": {
+                "tags": [
+                    "AreaOfExpertise"
+                ],
+                "summary": "Display the specified AreaOfExpertise",
+                "description": "Get AreaOfExpertise",
+                "operationId": "App\\Http\\Controllers\\API\\AreaOfExpertiseAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of AreaOfExpertise",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/AreaOfExpertise"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "AreaOfExpertise"
+                ],
+                "summary": "Update the specified AreaOfExpertise in storage",
+                "description": "Update AreaOfExpertise",
+                "operationId": "App\\Http\\Controllers\\API\\AreaOfExpertiseAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of AreaOfExpertise",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "AreaOfExpertise that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AreaOfExpertise"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/braces": {
+            "get": {
+                "tags": [
+                    "Brace"
+                ],
+                "summary": "Get a listing of the Braces.",
+                "description": "Get all Braces",
+                "operationId": "App\\Http\\Controllers\\API\\BraceAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Brace"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Brace"
+                ],
+                "summary": "Store a newly created Brace in storage",
+                "description": "Store Brace",
+                "operationId": "App\\Http\\Controllers\\API\\BraceAPIController::store",
+                "requestBody": {
+                    "description": "Brace that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Brace"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Brace"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/brace_status": {
+            "get": {
+                "tags": [
+                    "Business"
+                ],
+                "summary": "Display the specified Brace Status",
+                "description": "Get Brace Status",
+                "operationId": "App\\Http\\Controllers\\API\\BraceAPIController::getBraceStatus",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Brace"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/braces/{id}": {
+            "get": {
+                "tags": [
+                    "Brace"
+                ],
+                "summary": "Display the specified Brace",
+                "description": "Get Brace",
+                "operationId": "App\\Http\\Controllers\\API\\BraceAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Brace",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Brace"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Brace"
+                ],
+                "summary": "Update the specified Brace in storage",
+                "description": "Update Brace",
+                "operationId": "App\\Http\\Controllers\\API\\BraceAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Brace",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Brace that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Brace"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Brace"
+                ],
+                "summary": "Remove the specified Brace from storage",
+                "description": "Delete Brace",
+                "operationId": "App\\Http\\Controllers\\API\\BraceAPIController::destroy",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Brace",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "string"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/brace_company_informations": {
+            "get": {
+                "tags": [
+                    "BraceCompanyInformation"
+                ],
+                "summary": "Get a listing of the BraceCompanyInformations.",
+                "description": "Get all BraceCompanyInformations",
+                "operationId": "App\\Http\\Controllers\\API\\BraceCompanyInformationAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/BraceCompanyInformation"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "BraceCompanyInformation"
+                ],
+                "summary": "Store a newly created BraceCompanyInformation in storage",
+                "description": "Store BraceCompanyInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BraceCompanyInformationAPIController::store",
+                "requestBody": {
+                    "description": "BraceCompanyInformation that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BraceCompanyInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BraceCompanyInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/brace_company_informations/{id}": {
+            "get": {
+                "tags": [
+                    "BraceCompanyInformation"
+                ],
+                "summary": "Display the specified BraceCompanyInformation",
+                "description": "Get BraceCompanyInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BraceCompanyInformationAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BraceCompanyInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BraceCompanyInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "BraceCompanyInformation"
+                ],
+                "summary": "Update the specified BraceCompanyInformation in storage",
+                "description": "Update BraceCompanyInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BraceCompanyInformationAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BraceCompanyInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "BraceCompanyInformation that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BraceCompanyInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/brace_contact_informations": {
+            "get": {
+                "tags": [
+                    "BraceContactInformation"
+                ],
+                "summary": "Get a listing of the BraceContactInformations.",
+                "description": "Get all BraceContactInformations",
+                "operationId": "App\\Http\\Controllers\\API\\BraceContactInformationAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/BraceContactInformation"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "BraceContactInformation"
+                ],
+                "summary": "Store a newly created BraceContactInformation in storage",
+                "description": "Store BraceContactInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BraceContactInformationAPIController::store",
+                "requestBody": {
+                    "description": "BraceContactInformation that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BraceContactInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BraceContactInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/brace_contact_informations/{id}": {
+            "get": {
+                "tags": [
+                    "BraceContactInformation"
+                ],
+                "summary": "Display the specified BraceContactInformation",
+                "description": "Get BraceContactInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BraceContactInformationAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BraceContactInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BraceContactInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "BraceContactInformation"
+                ],
+                "summary": "Update the specified BraceContactInformation in storage",
+                "description": "Update BraceContactInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BraceContactInformationAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BraceContactInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "BraceContactInformation that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BraceContactInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/brace_personal_informations": {
+            "get": {
+                "tags": [
+                    "BracePersonalInformation"
+                ],
+                "summary": "Get a listing of the BracePersonalInformations.",
+                "description": "Get all BracePersonalInformations",
+                "operationId": "App\\Http\\Controllers\\API\\BracePersonalInformationAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/BracePersonalInformation"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "BracePersonalInformation"
+                ],
+                "summary": "Store a newly created BracePersonalInformation in storage",
+                "description": "Store BracePersonalInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BracePersonalInformationAPIController::store",
+                "requestBody": {
+                    "description": "BracePersonalInformation that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BracePersonalInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BracePersonalInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/brace_personal_informations/{id}": {
+            "get": {
+                "tags": [
+                    "BracePersonalInformation"
+                ],
+                "summary": "Display the specified BracePersonalInformation",
+                "description": "Get BracePersonalInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BracePersonalInformationAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BracePersonalInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BracePersonalInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "BracePersonalInformation"
+                ],
+                "summary": "Update the specified BracePersonalInformation in storage",
+                "description": "Update BracePersonalInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BracePersonalInformationAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BracePersonalInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "BracePersonalInformation that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BracePersonalInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/businesses": {
+            "get": {
+                "tags": [
+                    "Business"
+                ],
+                "summary": "Get a listing of the Businesses.",
+                "description": "Get all Businesses",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Business"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/business": {
+            "post": {
+                "tags": [
+                    "Business"
+                ],
+                "summary": "Store a newly created Business in storage",
+                "description": "Store Business",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessAPIController::store",
+                "requestBody": {
+                    "description": "Business that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Business"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Business"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/business_status": {
+            "get": {
+                "tags": [
+                    "Business"
+                ],
+                "summary": "Display the specified Business Status",
+                "description": "Get Business Status",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessAPIController::getBusinessStatus",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Business"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/business/{id}": {
+            "get": {
+                "tags": [
+                    "Business"
+                ],
+                "summary": "Display the specified Business",
+                "description": "Get Business",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Business",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Business"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Business"
+                ],
+                "summary": "Update the specified Business in storage",
+                "description": "Update Business",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Business",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Business that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Business"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/business_company_informations": {
+            "get": {
+                "tags": [
+                    "BusinessCompanyInformation"
+                ],
+                "summary": "Get a listing of the BusinessCompanyInformations.",
+                "description": "Get all BusinessCompanyInformations",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessCompanyInformationAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/BusinessCompanyInformation"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "BusinessCompanyInformation"
+                ],
+                "summary": "Store a newly created BusinessCompanyInformation in storage",
+                "description": "Store BusinessCompanyInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessCompanyInformationAPIController::store",
+                "requestBody": {
+                    "description": "BusinessCompanyInformation that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BusinessCompanyInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BusinessCompanyInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/business_company_informations/{id}": {
+            "get": {
+                "tags": [
+                    "BusinessCompanyInformation"
+                ],
+                "summary": "Display the specified BusinessCompanyInformation",
+                "description": "Get BusinessCompanyInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessCompanyInformationAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BusinessCompanyInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BusinessCompanyInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "BusinessCompanyInformation"
+                ],
+                "summary": "Update the specified BusinessCompanyInformation in storage",
+                "description": "Update BusinessCompanyInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessCompanyInformationAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BusinessCompanyInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "BusinessCompanyInformation that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BusinessCompanyInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/business_contact_informations": {
+            "get": {
+                "tags": [
+                    "BusinessContactInformation"
+                ],
+                "summary": "Get a listing of the BusinessContactInformations.",
+                "description": "Get all BusinessContactInformations",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessContactInformationAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/BusinessContactInformation"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "BusinessContactInformation"
+                ],
+                "summary": "Store a newly created BusinessContactInformation in storage",
+                "description": "Store BusinessContactInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessContactInformationAPIController::store",
+                "requestBody": {
+                    "description": "BusinessContactInformation that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BusinessContactInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BusinessContactInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/business_contact_informations/{id}": {
+            "get": {
+                "tags": [
+                    "BusinessContactInformation"
+                ],
+                "summary": "Display the specified BusinessContactInformation",
+                "description": "Get BusinessContactInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessContactInformationAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BusinessContactInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BusinessContactInformation"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "BusinessContactInformation"
+                ],
+                "summary": "Update the specified BusinessContactInformation in storage",
+                "description": "Update BusinessContactInformation",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessContactInformationAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BusinessContactInformation",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "BusinessContactInformation that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BusinessContactInformation"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/business_verification_onboardings": {
+            "get": {
+                "tags": [
+                    "BusinessVerificationOnboarding"
+                ],
+                "summary": "Get a listing of the BusinessVerificationOnboardings.",
+                "description": "Get all BusinessVerificationOnboardings",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessVerificationOnboardingAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/BusinessVerificationOnboarding"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "BusinessVerificationOnboarding"
+                ],
+                "summary": "Store a newly created BusinessVerificationOnboarding in storage",
+                "description": "Store BusinessVerificationOnboarding",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessVerificationOnboardingAPIController::store",
+                "requestBody": {
+                    "description": "BusinessVerificationOnboarding that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BusinessVerificationOnboarding"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BusinessVerificationOnboarding"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/business_verification_onboardings/{id}": {
+            "get": {
+                "tags": [
+                    "BusinessVerificationOnboarding"
+                ],
+                "summary": "Display the specified BusinessVerificationOnboarding",
+                "description": "Get BusinessVerificationOnboarding",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessVerificationOnboardingAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BusinessVerificationOnboarding",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/BusinessVerificationOnboarding"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "BusinessVerificationOnboarding"
+                ],
+                "summary": "Update the specified BusinessVerificationOnboarding in storage",
+                "description": "Update BusinessVerificationOnboarding",
+                "operationId": "App\\Http\\Controllers\\API\\BusinessVerificationOnboardingAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of BusinessVerificationOnboarding",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "BusinessVerificationOnboarding that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BusinessVerificationOnboarding"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/countries": {
+            "get": {
+                "tags": [
+                    "Country"
+                ],
+                "summary": "Get a listing of the Countries.",
+                "description": "Get all Countries",
+                "operationId": "App\\Http\\Controllers\\API\\CountryAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Country"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Country"
+                ],
+                "summary": "Store a newly created Country in storage",
+                "description": "Store Country",
+                "operationId": "App\\Http\\Controllers\\API\\CountryAPIController::store",
+                "requestBody": {
+                    "description": "Country that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Country"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Country"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/countries/{id}": {
+            "get": {
+                "tags": [
+                    "Country"
+                ],
+                "summary": "Display the specified Country",
+                "description": "Get Country",
+                "operationId": "App\\Http\\Controllers\\API\\CountryAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Country",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Country"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Country"
+                ],
+                "summary": "Update the specified Country in storage",
+                "description": "Update Country",
+                "operationId": "App\\Http\\Controllers\\API\\CountryAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Country",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Country that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Country"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/sectors": {
+            "get": {
+                "tags": [
+                    "Sector"
+                ],
+                "summary": "Get a listing of the Sectors.",
+                "description": "Get all Sectors",
+                "operationId": "App\\Http\\Controllers\\API\\SectorAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Sector"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Sector"
+                ],
+                "summary": "Store a newly created Sector in storage",
+                "description": "Store Sector",
+                "operationId": "App\\Http\\Controllers\\API\\SectorAPIController::store",
+                "requestBody": {
+                    "description": "Sector that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Sector"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Sector"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/sectors/{id}": {
+            "get": {
+                "tags": [
+                    "Sector"
+                ],
+                "summary": "Display the specified Sector",
+                "description": "Get Sector",
+                "operationId": "App\\Http\\Controllers\\API\\SectorAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Sector",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/Sector"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Sector"
+                ],
+                "summary": "Update the specified Sector in storage",
+                "description": "Update Sector",
+                "operationId": "App\\Http\\Controllers\\API\\SectorAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of Sector",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Sector that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Sector"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/states": {
+            "get": {
+                "tags": [
+                    "State"
+                ],
+                "summary": "Get a listing of the States.",
+                "description": "Get all States",
+                "operationId": "App\\Http\\Controllers\\API\\StateAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/State"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "State"
+                ],
+                "summary": "Store a newly created State in storage",
+                "description": "Store State",
+                "operationId": "App\\Http\\Controllers\\API\\StateAPIController::store",
+                "requestBody": {
+                    "description": "State that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/State"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/State"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/states/{id}": {
+            "get": {
+                "tags": [
+                    "State"
+                ],
+                "summary": "Display the specified State",
+                "description": "Get State",
+                "operationId": "App\\Http\\Controllers\\API\\StateAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of State",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/State"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "State"
+                ],
+                "summary": "Update the specified State in storage",
+                "description": "Update State",
+                "operationId": "App\\Http\\Controllers\\API\\StateAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of State",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "State that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/State"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Get a listing of the Users.",
+                "description": "Get all Users",
+                "operationId": "App\\Http\\Controllers\\API\\UserAPIController::index",
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/User"
+                                            }
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/register": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Store a newly created User in storage",
+                "description": "Store User",
+                "operationId": "App\\Http\\Controllers\\API\\UserAPIController::store",
+                "requestBody": {
+                    "description": "User that should be stored",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User login endpoint",
+                "description": "Store User",
+                "operationId": "App\\Http\\Controllers\\API\\UserAPIController::Login",
+                "requestBody": {
+                    "description": "User login endpoint",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Login"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/send_email_token": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Send Email Verification endpoint",
+                "description": "Store User",
+                "operationId": "App\\Http\\Controllers\\API\\UserAPIController::sendEmailVerification",
+                "requestBody": {
+                    "description": "User Send Email Verification endpoint",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Email"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/verify_email_token": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "User Send Email Verification endpoint",
+                "description": "Store User",
+                "operationId": "App\\Http\\Controllers\\API\\UserAPIController::verifyEmail",
+                "requestBody": {
+                    "description": "User Send Email Verification endpoint",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Email"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Display the specified User",
+                "description": "Get User",
+                "operationId": "App\\Http\\Controllers\\API\\UserAPIController::show",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of User",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean"
+                                        },
+                                        "data": {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        "message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Update the specified User in storage",
+                "description": "Update User",
+                "operationId": "App\\Http\\Controllers\\API\\UserAPIController::update",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of User",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "User that should be updated",
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AreaOfExpertise": {
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "description": "name",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "description",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Brace": {
+                "required": [
+                    "type",
+                    "area_of_expertise_id",
+                    "user_id"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "type": {
+                        "description": "1 stand for individual, 2 stand for company",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "area_of_expertise_id": {
+                        "description": "area_of_expertise_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "BraceCompanyInformation": {
+                "required": [
+                    "company_name",
+                    "description",
+                    "number_of_staff",
+                    "phone_number",
+                    "email"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "company_name": {
+                        "description": "company_name",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "description",
+                        "type": "string"
+                    },
+                    "number_of_staff": {
+                        "description": "number_of_staff",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "phone_number": {
+                        "description": "phone_number",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "website_url": {
+                        "description": "website_url",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "BraceContactInformation": {
+                "required": [
+                    "first_name",
+                    "last_name",
+                    "phone_number",
+                    "email",
+                    "role"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "first_name": {
+                        "description": "first_name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "last_name",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "phone_number",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "role": {
+                        "description": "role",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "BracePersonalInformation": {
+                "required": [
+                    "first_name",
+                    "last_name",
+                    "username",
+                    "website_or_portfolio_url",
+                    "address",
+                    "country_id",
+                    "state_id",
+                    "phone_number",
+                    "profile_info"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "first_name": {
+                        "description": "first_name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "last_name",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "username",
+                        "type": "string"
+                    },
+                    "website_or_portfolio_url": {
+                        "description": "website_or_portfolio_url",
+                        "type": "string"
+                    },
+                    "address": {
+                        "description": "address",
+                        "type": "string"
+                    },
+                    "country_id": {
+                        "description": "country_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "state_id": {
+                        "description": "state_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "phone_number": {
+                        "description": "phone_number",
+                        "type": "string"
+                    },
+                    "profile_info": {
+                        "description": "profile_info",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Business": {
+                "required": [
+                    "type",
+                    "sector_id",
+                    "user_id"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "type": {
+                        "description": "1 stand for new business, and 2 stand for existing business",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sector_id": {
+                        "description": "sector_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "BusinessCompanyInformation": {
+                "required": [
+                    "company_name",
+                    "description",
+                    "number_of_employees",
+                    "phone_number",
+                    "email"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "company_name": {
+                        "description": "company_name",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "description",
+                        "type": "string"
+                    },
+                    "number_of_employees": {
+                        "description": "number_of_employees",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "phone_number": {
+                        "description": "phone_number",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "website_url": {
+                        "description": "website_url",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "BusinessContactInformation": {
+                "required": [
+                    "first_name",
+                    "last_name",
+                    "address",
+                    "country_id",
+                    "state_id",
+                    "city",
+                    "phone_number",
+                    "email"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "first_name": {
+                        "description": "first_name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "last_name",
+                        "type": "string"
+                    },
+                    "address": {
+                        "description": "address",
+                        "type": "string"
+                    },
+                    "country_id": {
+                        "description": "country_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "state_id": {
+                        "description": "state_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "city": {
+                        "description": "city",
+                        "type": "string"
+                    },
+                    "phone_number": {
+                        "description": "phone_number",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "BusinessVerificationOnboarding": {
+                "required": [
+                    "name",
+                    "year_of_registration",
+                    "registration_number",
+                    "tax_numbers"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "user_id": {
+                        "description": "user_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "description": "name",
+                        "type": "string"
+                    },
+                    "year_of_registration": {
+                        "description": "year_of_registration",
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "registration_number": {
+                        "description": "registration_number",
+                        "type": "string"
+                    },
+                    "tax_numbers": {
+                        "description": "tax_numbers",
+                        "type": "string"
+                    },
+                    "logo_url": {
+                        "description": "logo_url",
+                        "type": "string"
+                    },
+                    "certificate_url": {
+                        "description": "certificate_url",
+                        "type": "string"
+                    },
+                    "valid_id_url": {
+                        "description": "valid_id_url",
+                        "type": "string"
+                    },
+                    "tin": {
+                        "description": "tin",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Country": {
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "description": "name",
+                        "type": "string"
+                    },
+                    "code": {
+                        "description": "code",
+                        "type": "string"
+                    },
+                    "logo_url": {
+                        "description": "logo_url",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Sector": {
+                "required": [
+                    "name",
+                    "description"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "description": "name",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "description",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "State": {
+                "required": [
+                    "name",
+                    "country_id"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "name": {
+                        "description": "name",
+                        "type": "string"
+                    },
+                    "country_id": {
+                        "description": "country_id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "code": {
+                        "description": "code",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "User": {
+                "required": [
+                    "first_name",
+                    "last_name",
+                    "email",
+                    "password",
+                    "type"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "first_name": {
+                        "description": "first_name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "last_name",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "email_verified_at": {
+                        "description": "email_verified_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "password": {
+                        "description": "password",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "type",
+                        "type": "string"
+                    },
+                    "verify_email": {
+                        "description": "verify_email",
+                        "type": "string"
+                    },
+                    "locked_status": {
+                        "description": "locked_status",
+                        "type": "string"
+                    },
+                    "remember_token": {
+                        "description": "remember_token",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Login": {
+                "required": [
+                    "email",
+                    "password",
+                    "type"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "first_name": {
+                        "description": "first_name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "last_name",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "email_verified_at": {
+                        "description": "email_verified_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "password": {
+                        "description": "password",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "type",
+                        "type": "string"
+                    },
+                    "verify_email": {
+                        "description": "verify_email",
+                        "type": "string"
+                    },
+                    "locked_status": {
+                        "description": "locked_status",
+                        "type": "string"
+                    },
+                    "remember_token": {
+                        "description": "remember_token",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            },
+            "Email": {
+                "required": [
+                    "email"
+                ],
+                "properties": {
+                    "id": {
+                        "description": "id",
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "first_name": {
+                        "description": "first_name",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "last_name",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "email",
+                        "type": "string"
+                    },
+                    "email_verified_at": {
+                        "description": "email_verified_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "password": {
+                        "description": "password",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "type",
+                        "type": "string"
+                    },
+                    "verify_email": {
+                        "description": "verify_email",
+                        "type": "string"
+                    },
+                    "locked_status": {
+                        "description": "locked_status",
+                        "type": "string"
+                    },
+                    "remember_token": {
+                        "description": "remember_token",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "created_at",
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "description": "updated_at",
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "securitySchemes": {
+            "apikey": {
+                "type": "apiKey",
+                "name": "apikey",
+                "in": "header"
+            },
+            "Authorization": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "apikey": []
+        },
+        {
+            "Authorization": []
+        }
+    ]
+}
